@@ -9,12 +9,6 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
-await addStudent({
-    name:'Ghina',
-    dob:'1990-9-3',
-    address:"Saida"
-});
-
 app.get("/", async (req, res) => {
     try {
         const students = await getAllStudents();
